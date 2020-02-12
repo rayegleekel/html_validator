@@ -19,7 +19,7 @@ def validate_html(html):
     balanced = True
    # while index < len(tags) and balanced:
     for index in range(len(phrases)):
-        symbol = tags[index]
+        symbol = phrases[index]
         if symbol[1] != '/':
             s.append(symbol)
         else:
