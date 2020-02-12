@@ -17,7 +17,6 @@ def validate_html(html):
     s = [] 
     phrases = _extract_tags(html)
     balanced = True
-    index = 0
    # while index < len(tags) and balanced:
     for index in range(len(phrases)):
         symbol = tags[index]
@@ -31,7 +30,7 @@ def validate_html(html):
                 if symbol[2:len(symbol)] != top[1:len(top)]:
                         balanced = False
        # index = index + 1
-    if balanced and s.isEmpty():
+    if balanced and len(s) == 0:
         return True
     else:
         return False
